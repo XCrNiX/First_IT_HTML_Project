@@ -1,0 +1,77 @@
+<html>
+	<head>
+	<link rel="icon" type="image/x-icon" href="../carrot.ico">
+	<font color="#FFFFFF">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /> 
+		<title>ZelenoPovrce.com</title>
+		<script type="text/javascript" language="JavaScript">
+		function ProvjeriStatus()
+			{
+			var today = new Date();
+			var sat = (21 - today.getHours())  //21 je vrijeme zatvaranja. <---------- Moze se mijenjat za test 
+			sat = sat * 60; //Sat pretvoren u minute
+			var minut = (60 - today.getMinutes()); //Uzima trenutne minute										
+			preostalo_vrijeme = sat + minut; //Sve minute zbrojene
+			var nova = preostalo_vrijeme-60;
+			
+		
+			var z = -1;
+			while(preostalo_vrijeme>=60)
+			{
+			preostalo_vrijeme = preostalo_vrijeme - 60;
+			z++;
+			}
+			
+			
+			if(z<10) z = "0" + z; 													/*Dodavanje nule u prefiks ako je broj manji od 10*/
+			if(preostalo_vrijeme<10) preostalo_vrijeme = "0" + preostalo_vrijeme;
+			
+			
+			var fin = z + "h" + " i " + preostalo_vrijeme + "min"
+			
+			if(nova > 0)
+				{
+				document.getElementById("p1").textContent = "Zatvaramo za: "+ fin;
+				}
+			
+			if((nova <= 0)||(nova>=720))
+				{
+				document.getElementById("p1").textContent = "Nažalost zatvoreni smo";
+				}
+			
+				
+			}
+		</script>
+		<link rel="stylesheet" href="..//css.css">
+		<body style="background: linear-gradient(110deg, rgb(160,252,68) 35%, #ffed4b 35%);">
+			<form>
+				<h1><hz>Zeleno</hz>Povrće.com</h1>
+				<p>
+				<h3>Lokacija i upute</h3>
+				<br>
+					<ul>
+					   <b><li><a href="../IT - Projekt.html">Početna stranica</a></li></b>
+					   <b><li><a href="info.html">Info</a></li></b>
+					   <b><li><a href="kontakt.html">Kontakt</a></li></b>
+					   <b><li><a href="lokacija.html">Lokacija</a></li></b>
+					</ul>
+				<h2>Radimo li trenutno?</h2>
+				<p>
+				<font size="10px"><h2>Klikni i saznaj!</h2></font>
+				<img width="200" height="auto" align="right" src="../images/lokacija.png"></img>
+				<p><br>
+				<input 	class="favorite styled"
+						type="button"
+						value="Vrijeme do zatvaranja"
+						onclick="ProvjeriStatus()">
+						<hrez id="p1"></hrez>
+				<br>
+				<h2>Kako do nas?</h2>
+				<a href="https://goo.gl/maps/pgR8kpteMtvGrzPJ9" class="styled2">Idi na Karte</a>
+				<h2>Ili pogledaj na našoj karti!</h2>
+				<iframe class="karta" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3104.4074544621362!2d16.434289915632544!3d43.51426042912626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355dfcc1170fe7%3A0x3c5eb820e37be136!2sPark%20Emanuela%20Vidovi%C4%87a%2C%2021000%2C%20Split!5e1!3m2!1shr!2shr!4v1654337473571!5m2!1shr!2shr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<p>
+			</form>
+		</body>
+	</head>
+</html>

@@ -1,0 +1,263 @@
+h1
+{
+	text-shadow:4px -4px 2px #023103;
+	color: white;
+	font-family: Calibri;
+	font-size: 50px;
+	display: block;
+	background-color:#c37d04;
+	border-color:rgb(5,117,6);
+	border-style:solid;
+	border-radius:50px;
+	text-indent:20px;
+	margin-bottom:10px;
+}
+
+h2{
+	color:rgb(5,117,6); /*Zelena boja*/
+	font-family: Calibri;
+	font-size: 30px;
+	text-indent:20px;
+	margin-bottom:5px;
+	text-shadow:2px -2px 1px #ffffff;
+}
+
+h3{
+	color:white;
+	font-family: Calibri;
+	font-size: 30px;
+	text-indent:20px;
+	margin-bottom:40px;
+	margin-top:25px;
+	text-shadow:2px -2px 1px rgb(5,117,6);
+	display: block;
+	background-color:#c37d04;
+	border-color: #c37d04;
+	border-radius:50px;
+}
+
+.sredina{
+	color:white;
+	font-family: Calibri;
+	font-size: 30px;
+	text-indent:20px;
+	margin-bottom:40px;
+	margin-top:25px;
+	text-shadow:2px -2px 1px #c37d04;
+	display: block;
+	background-color:rgb(5,117,6);
+	border-color: #c37d04;
+	border-radius:50px;
+	text-align:center;
+}
+
+.infoimg{
+		width:300px;
+		height:auto;
+		border-radius:50px;
+		border: 10px solid rgb(5,117,6);
+}
+
+hz
+{
+	color:rgb(5,117,6);
+	font-family: Calibri;
+	font-size: 50px;
+}
+
+hm /*Hover imena povrca*/
+{
+	color:black;
+	font-size: 30px;
+	text-shadow:2px -2px 2px rgb(247, 166, 15);
+}
+ht
+{
+	text-shadow:2px -2px 2px #023103;
+	padding-right:20px;
+	color: white;
+	font-family: Calibri;
+	font-size: 20px;
+	display: block;
+	background-color:#c37d04;
+	border-radius:30px;
+	text-indent:20px;
+}
+
+hrez /*Rezultat botuna vremena zatvaranja*/
+{
+	text-shadow:2px -2px 2px #023103;
+	color: white;
+	font-family: Calibri;
+	font-size: 40px;
+	display: block;
+	background-color:#0F9D58;
+	border-radius:50px;
+	text-indent:30px;
+	margin-left:20px;
+	margin-top:20px;
+}
+
+ul { /* Lista meni-a */
+  list-style-type: none;
+  margin: 0;
+  padding: 20;
+  overflow: hidden;
+  background-color: transparent;
+  position: absolute; /*meni ne prati scroll misa*/
+  top: 130;
+  width: 90%;
+
+}
+
+
+
+
+li { /* Pozicija meni-a */
+  float: left;
+}
+
+
+li a { /* botuni_meni */
+  display: block;
+  background-color:#c37d04;
+  border-radius:50px;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; /* Maknut underline */
+  font-family: Manrope;
+  border-style:solid;
+  border-color:rgb(5,117,6);
+}
+
+li a:hover { /* Botun kad je hoveran */
+  background-color: rgb(5,117,6);
+}
+
+.textOverImage{
+    width:250px; /*Velicina slika*/
+    height:250px;
+    display:inline-block;
+    background-size:cover;
+    border-radius:4px;
+    margin:4px;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+	/*zaobljeni rub slika*/
+			border-radius:50px;
+		-moz-border-radius:50px;
+		-webkit-border-radius:50px;
+		/*Sjene iza slika*/
+		-webkit-box-shadow:0px 0px 0px 0px #000000 ,7px -7px 9px 0px #000000 ;
+-moz-box-shadow:0px 0px 0px 0px #000000 ,7px -7px 9px 0px #000000 ;
+box-shadow:0px 0px 0px 0px #000000 ,7px -7px 9px 0px #000000 ;
+  }
+  
+  .textOverImage > input{
+    display:none;
+  }
+  
+  .textOverImage > div,.textOverImage > hm{ /*Kocka koja se pojavi preko slike*/
+    position:absolute;
+    background-color:rgba(255,255,255,0.8);
+    bottom:30px;
+    left:10px;
+    right:10px;
+    border-radius:40px;
+    padding:20px;
+    overflow:hidden;
+    opacity:0;
+    transition:.3s;
+  }
+  
+  .textOverImage:hover > hm,.textOverImage > input:checked + hm + div{ /*Pozicija imena u hoveru*/
+    bottom:8px;
+    opacity:1;
+  }
+  
+  .textOverImage > input:checked + hm{ /*Animiranje i nestajanje imena*/
+    bottom:-20px;
+    opacity:0;
+  }
+  
+  .textOverImage > hm{ /*margine imena*/
+    margin:0;
+  }
+  
+  .styled { /*Ovo botun za vrijeme zatvaranja*/
+    border: 0;
+    line-height: 3;
+    padding: 0 40px;
+    font-size: 20px;
+    text-align: center;
+	color:white;
+    background-color:#4285F4;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+	margin-top:-30px;
+	margin-left:20px;
+  }
+  
+  .styled:hover {
+    background-color: #3c64a6;
+}
+
+  a.styled2 { /*Botun za google lokaciju*/
+	font-family: Calibri;
+    border: 0;
+    line-height: 3;
+    padding: 15 80px;
+    font-size: 20px;
+    text-align: center;
+	color:white;
+    background-color:#DB4437;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+	margin-top:-30px;
+	margin-left:20px;
+	text-decoration: none;
+  }
+  
+  a.styled2:hover {
+    background-color: #9c342c;
+}
+
+
+hinf
+{
+	padding:40px 10px;
+	height:50%;
+	text-align:right;
+	margin-left: auto;
+    margin-right: auto;
+	text-shadow:2px -2px 2px #023103;
+	color: white;
+	font-family: Calibri;
+	font-size: 20px;
+	display: block;
+	background-color:#c37d04;
+	border-radius:30px;
+}
+.leftinf
+{
+	padding:40px 10px;
+	height:50%;
+	text-align:left;
+	margin-left: auto;
+    margin-right: auto;
+	text-shadow:2px -2px 2px #023103;
+	color: white;
+	font-family: Calibri;
+	font-size: 20px;
+	display: block;
+	background-color:#c37d04;
+	border-radius:30px;
+}
+
+.karta{
+	border-radius:50px;
+}
